@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JS Test Page</title>
+	</head>
+	
+	<body>
+		<p>Grid</p>
+		<table>
+		</table>
+			
+		<p id=grid1> </p>
+		
+		
+		<script>
+		
+			var table = document.getElementById("grid1"); //allows grid table to be accessable in script
+			
+			//var row = 0, col = 0;//dimentions of table
+			
+			function createGrid(row, col)//greate a string of the html code for a table of n x n size
+			{
+				var r;
+				var tableHtml = "";
+				tableHtml = tableHtml + "<table>";
+				for (r=0;r<=row; r++)
+					{
+					
+					var c;
+					tableHtml = tableHtml + "<tr>";
+					for (c=0; c<=col; c++)
+						{
+							tableHtml = tableHtml + " <td>";
+						
+							tableHtml = tableHtml + " " + r + "" + c + " ";
+						
+							tableHtml = tableHtml + " </td>";
+						}
+					tableHtml = tableHtml + "</tr>";					
+					
+					}
+					tableHtml = tableHtml + "</table>";
+					return tableHtml;
+			
+			}
+			
+			
+			
+			
+			//table.innerHTML = ""
+					document.write("rowjnhjknk" + " <br>");
+					
+					document.write("<br>" + createGrid(7, 9));
+					
+					table.innerHTML = "<br>" + createGrid(3,3)+"";
+							
+			
+			//document.write("hello world");
+		</script>
+		
+		
+		
+	
+	
+	</body>
